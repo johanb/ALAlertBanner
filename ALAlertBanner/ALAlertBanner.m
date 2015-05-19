@@ -705,14 +705,14 @@ static CGFloat const kForceHideAnimationDuration = 0.1f;
             fillColor = [UIColor colorWithRed:(173/255.0) green:(48/255.0) blue:(48/255.0) alpha:1.f];
             break;
         case ALAlertBannerStyleNotify:
-            fillColor = [UIColor colorWithRed:(48/255.0) green:(110/255.0) blue:(173/255.0) alpha:1.f];
+            fillColor = [UIColor colorWithRed:(20/255.0) green:(109/255.0) blue:(149/255.0) alpha:1.f];
             break;
         case ALAlertBannerStyleWarning:
             fillColor = [UIColor colorWithRed:(211/255.0) green:(209/255.0) blue:(100/255.0) alpha:1.f];
             break;
     }
     
-    NSArray *colorsArray = [NSArray arrayWithObjects:(id)[fillColor CGColor], (id)[[fillColor darkerColor] CGColor], nil];
+    NSArray *colorsArray = [NSArray arrayWithObjects:(id)[fillColor CGColor], nil];
     CGColorSpaceRef colorSpace =  CGColorSpaceCreateDeviceRGB();
     const CGFloat locations[2] = {0.f, 1.f};
     CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)colorsArray, locations);
@@ -721,11 +721,6 @@ static CGFloat const kForceHideAnimationDuration = 0.1f;
     
     CGGradientRelease(gradient);
     CGColorSpaceRelease(colorSpace);
-    
-    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:0.f green:0.f blue:0.f alpha:0.6f].CGColor);
-    CGContextFillRect(context, CGRectMake(0.f, rect.size.height - 1.f, rect.size.width, 1.f));
-    CGContextSetFillColorWithColor(context, [UIColor colorWithRed:1.f green:1.f blue:1.f alpha:0.3f].CGColor);
-    CGContextFillRect(context, CGRectMake(0.f, 0.f, rect.size.width, 1.f));
 }
 
 - (id)nextAvailableViewController:(id)view {
