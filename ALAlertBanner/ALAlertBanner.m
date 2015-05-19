@@ -696,21 +696,7 @@ static CGFloat const kForceHideAnimationDuration = 0.1f;
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    UIColor *fillColor;
-    switch (self.style) {
-        case ALAlertBannerStyleSuccess:
-            fillColor = [UIColor colorWithRed:(77/255.0) green:(175/255.0) blue:(67/255.0) alpha:1.f];
-            break;
-        case ALAlertBannerStyleFailure:
-            fillColor = [UIColor colorWithRed:(173/255.0) green:(48/255.0) blue:(48/255.0) alpha:1.f];
-            break;
-        case ALAlertBannerStyleNotify:
-            fillColor = [UIColor colorWithRed:(20/255.0) green:(109/255.0) blue:(149/255.0) alpha:1.f];
-            break;
-        case ALAlertBannerStyleWarning:
-            fillColor = [UIColor colorWithRed:(211/255.0) green:(209/255.0) blue:(100/255.0) alpha:1.f];
-            break;
-    }
+    UIColor *fillColor = [UIColor colorWithRed:(20/255.0) green:(109/255.0) blue:(149/255.0) alpha:1.f];
     
     NSArray *colorsArray = [NSArray arrayWithObjects:(id)[fillColor CGColor], nil];
     CGColorSpaceRef colorSpace =  CGColorSpaceCreateDeviceRGB();
