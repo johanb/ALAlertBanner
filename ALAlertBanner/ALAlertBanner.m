@@ -171,7 +171,7 @@ static CGFloat const kForceHideAnimationDuration = 0.1f;
     
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.backgroundColor = [UIColor clearColor];
-    _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:13.f];
+    _titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.f];
     _titleLabel.textColor = [UIColor colorWithWhite:1.f alpha:0.9f];
     _titleLabel.textAlignment = NSTextAlignmentLeft;
     _titleLabel.numberOfLines = 1;
@@ -184,7 +184,7 @@ static CGFloat const kForceHideAnimationDuration = 0.1f;
     
     _subtitleLabel = [[UILabel alloc] init];
     _subtitleLabel.backgroundColor = [UIColor clearColor];
-    _subtitleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10.f];
+    _subtitleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:14.f];
     _subtitleLabel.textColor = [UIColor colorWithWhite:1.f alpha:0.9f];
     _subtitleLabel.textAlignment = NSTextAlignmentLeft;
     _subtitleLabel.numberOfLines = 0;
